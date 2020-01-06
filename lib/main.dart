@@ -28,7 +28,7 @@ class _SampleAppPageState extends State<SampleAppPage> {
   void _updateText() {
     setState(() {
       // update the text
-      textToShow = "Flutter is Awesome!";
+      textToShow = "aaaaa";
     });
   }
 
@@ -47,7 +47,7 @@ class _SampleAppPageState extends State<SampleAppPage> {
             ),
             child: Center(
               child: Text(
-                'mrflutter.com',
+                textToShow,
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 30,
@@ -63,7 +63,7 @@ class _SampleAppPageState extends State<SampleAppPage> {
               actions: <Widget>[
                 IconButton(
                   icon: Icon(Icons.share),
-                  onPressed: () {},
+                  onPressed: _updateText,
                   tooltip: 'Share',
                 ),
               ],
